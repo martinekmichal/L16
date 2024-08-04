@@ -13,3 +13,9 @@ class TestIntegerSet(unittest.TestCase):
         self.assertEqual(self.prazdna_sada.soucet(), 0, "Chyba v součtu prázdné sady")
         self.assertEqual(self.zaporne_cisla_sada.soucet(), -45, "Chyba v součtu sady se zápornými čísly")
         self.assertEqual(self.smiseny_cisla_sada.soucet(), 9, "Chyba v součtu smíšené sady")
+    def test_prumer(self):
+        self.assertEqual(self.neprazdna_sada.prumer(), 5, "Chyba v průměru neprázdné sady")
+        with self.assertRaises(ValueError):
+            self.prazdna_sada.prumer()
+        self.assertEqual(self.zaporne_cisla_sada.prumer(), -5, "Chyba v průměru sady se zápornými čísly")
+        self.assertEqual(self.smiseny_cisla_sada.prumer(), 1.5, "Chyba v průměru smíšené sady")
