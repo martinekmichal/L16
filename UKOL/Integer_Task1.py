@@ -1,17 +1,17 @@
 class IntegerSet:
     def __init__(self, elements):
         self.elements = set(elements)
-    def sum(self):
+    def soucet(self):
         return sum(self.elements)
-    def mean(self):
+    def prumer(self):
         if not self.elements:
-            raise ValueError("Prázdné")
-        return self.sum() / len(self.elements)
+            raise ValueError("Prázdná pole")
+        return self.soucet() / len(self.elements)
     def maximum(self):
         if not self.elements:
-            raise ValueError("Prázdné")
+            raise ValueError("Prázdná pole")
         return max(self.elements)
     def minimum(self):
         if not self.elements:
-            raise ValueError("Prázdné")
+            raise ValueError("Prázdná pole")
         return min(self.elements)
